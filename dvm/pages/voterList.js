@@ -1,12 +1,12 @@
 import React from 'react';
 
-const HOME = () => {
+const voterList = () => {
     
         return (
             <div>
-                HOME
+                voterList
             </div>
         );
 }
 
-export default HOME;
+export default voterList;

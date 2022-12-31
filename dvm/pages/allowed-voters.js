@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HOME = () => {
+const allowedVoters = () => {
     
         return (
             <div>
@@ -9,4 +9,4 @@ const HOME = () => {
         );
 }
 
-export default HOME;
+export default allowedVoters;
