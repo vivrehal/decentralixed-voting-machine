@@ -8,17 +8,17 @@
 }
 .voter{
     
-    background-color: #231E39;
+    background-color: black;
     border-radius: 25px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
-    color: #B3B8CD;
+    color: white;
     padding: 2rem;
 }
 
 
 .voter__container__box{
     text-align: center;
-    border: 1px dotted #9a02ac;
+    border: 1px dotted white;
     border-radius: 5px;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .Candidate{
-    background-color: #9a02ac;
+    background-color: #f9f4fa;
     padding: .5rem;
     border-radius: .2rem;
     cursor: pointer;
@@ -90,7 +90,7 @@
 }
 
 .voterInfo_paragraph{
-    background-color: #231E39;
+    background-color: black;
     border-radius: 25px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
     color: #B3B8CD;
@@ -108,18 +108,19 @@
 /* //////////////////// */
 
 .sideInfo{
-    background-color: #231E39;
+    background-color: black;
     padding: .5rem 1rem;
+    box-shadow: 10px 10px 15px rgb(0 0 0 / 35%);
     border-radius: 1rem;
-    color: #B3B8CD;
+    color: white;
 }
 .sideInfo_box h4{
-    background-color: #9a02ac;
+    background-color: rgba(173,173,180,1);
     padding: .5rem;
     border-radius: .2rem;
 }
 .sideInfo_box .sideInfo_para{
-    background-color: #9a02ac;
+    background-color: rgba(173,173,180,1);
     padding: .5rem;
     border-radius: .2rem;
 }
@@ -131,7 +132,7 @@
 
 .card_box{
     line-height: 1;
-    border: 1px solid #9a02ac;
+    border: 1px solid white;
     padding: .2rem;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
     border-radius: .3rem;
@@ -144,12 +145,17 @@
 /* ////////////////////////////USER LIST */
 
 .createdVorter__info{
-    background-color: #231E39;
+    background-color: black;
     border-radius: 25px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
-    color: #B3B8CD;
+    color: white;
     padding: 2rem;
     
+}
+
+.createdVorter__info img {
+    height: 10%;
+    width: 100%;
 }
 
 .voter_upload_two{

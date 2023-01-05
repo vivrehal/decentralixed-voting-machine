@@ -65,10 +65,9 @@ const candidateRegisration = () => {
         {!fileUrl && (
           <div className={Style.sideInfo}>
             <div className={Style.sideInfo_box}>
-              <h4>Create Candidate For Voting</h4>
+              <h4>Create Candidate</h4>
               <p>
-                Blockchain voting orgainzation, privide ethereum blockchain eco
-                system
+              Blockchain voting orgainzation, privide ethereum blockchain eco system
               </p>
               <p className={Style.sideInfo_para}>Contract Candidate List</p>
             </div>
@@ -126,7 +125,7 @@ const candidateRegisration = () => {
           <Input
             inputType="text"
             title="Name"
-            placeholder="Voter Name"
+            placeholder="Candidate Name"
             handleClick={(e) =>
               setCandidateForm({ ...candidateForm, name: e.target.value })
             }
@@ -134,15 +133,15 @@ const candidateRegisration = () => {
           <Input
             inputType="text"
             title="Address"
-            placeholder="Voter Address"
+            placeholder="Candidate Address"
             handleClick={(e) =>
               setCandidateForm({ ...candidateForm, address: e.target.value })
             }
           />
           <Input
             inputType="text"
-            title="Age"
-            placeholder="Voter Position"
+            title="Position"
+            placeholder="Candidate Position"
             handleClick={(e) =>
               setCandidateForm({ ...candidateForm, age: e.target.value })
             }

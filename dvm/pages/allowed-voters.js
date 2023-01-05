@@ -66,10 +66,9 @@ const allowedVoters = () => {
         {!fileUrl && (
           <div className={Style.sideInfo}>
             <div className={Style.sideInfo_box}>
-              <h4>Create Candidate For Voting</h4>
+              <h4><center>Create Candidate</center></h4>
               <p>
-                Blockchain voting orgainzation, privide ethereum blockchain eco
-                system
+                Decentralized Voting Machine is safe and reliable and provides etherium blockchain environment.
               </p>
               <p className={Style.sideInfo_para}>Contract Candidate List</p>
             </div>
@@ -143,7 +142,7 @@ const allowedVoters = () => {
           <Input
             inputType="text"
             title="Position"
-            placeholder="Voter Position"
+            placeholder="Voter Age"
             handleClick={(e) =>
               setFormInput({ ...formInput, position: e.target.value })
             }
@@ -160,10 +159,10 @@ const allowedVoters = () => {
 
       <div className={Style.createdVorter}>
         <div className={Style.createdVorter__info}>
-          <Image src={images.creator} alt="user profile" />
+          <Image src={images.creator} width='10%' height='10%' alt="user profile" />
           <p>Notice</p>
           <p>
-            Organizer <span>0xf39Fd6e51..</span>
+            Organizer <span>0xf39Fd6e</span>
           </p>
           <p>
             Only organizer of the voting contract can create voter and candidate

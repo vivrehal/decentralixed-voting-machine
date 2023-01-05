@@ -193,7 +193,7 @@ contract Create {
         external
     {
         Voter storage voter = voters[msg.sender];
-
+        
         require(!voter.voter_voted, "You have already voted");
         require(voter.voter_allowed != 0, "You have no right to vote");
 
@@ -204,7 +204,6 @@ contract Create {
 
         candidates[_candidateAddress].voteCount += voter.voter_allowed;
     }
-
     function getVoterLength() public view returns (uint256) {
         return votersAddress.length;
     }

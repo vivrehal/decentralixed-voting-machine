@@ -7,8 +7,19 @@ import { useRouter } from "next/router";
 
 //INTERNAL IMPORT
 import { VotingAddress, VotingAddressABI } from "./constants";
+const projectId = '2JsCiEisUHY1cqLDOcnj4qgnk23'
+const projectSecret = 'efa466ef72e3b7379d4f3f4ed519c880'
+const auth = 'Basic '+ Buffer.from(projectId + ":" + projectSecret).toString('base64');
 
-const client = ipfsHttpClient("https://ipfs.infura.io:5001/api/v0");
+const client = ipfsHttpClient({
+  host:'ipfs.infura.io',
+  port:5001,
+  apiPath: '/api/v0',
+  protocol:'https',
+  headers:{
+    authorization: auth
+  }
+});
 
 const fetchContract = (signerOrProvider) =>
   new ethers.Contract(VotingAddress, VotingAddressABI, signerOrProvider);
@@ -66,7 +77,7 @@ export const VotingProvider = ({ children }) => {
     try {
       const added = await client.add({ content: file });
 
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      const url = `https://dvm.infura-ipfs.io/ipfs/${added.path}`;
 
       // setImage(url);
       return url;
@@ -80,7 +91,7 @@ export const VotingProvider = ({ children }) => {
     try {
       const added = await client.add({ content: file });
 
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      const url = `https://dvm.infura-ipfs.io/ipfs/${added.path}`;
       console.log(url);
       return url;
     } catch (error) {
@@ -104,7 +115,7 @@ export const VotingProvider = ({ children }) => {
     const data = JSON.stringify({ name, address, position, image: fileUrl });
     const added = await client.add(data);
 
-    const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+    const url = `https://dvm.infura-ipfs.io/ipfs/${added.path}`;
 
     const voter = await contract.voterRight(address, name, url, fileUrl);
     voter.wait();
@@ -142,7 +153,7 @@ export const VotingProvider = ({ children }) => {
 
   // =============================================
   ////////GIVE VOTE
-
+  
   const giveVote = async (id) => {
     try {
       const voterAddress = id.address;
@@ -157,6 +168,7 @@ export const VotingProvider = ({ children }) => {
       console.log(voteredList);
     } catch (error) {
       setError("Sorry!, You have already voted, Reload Browser");
+      
     }
   };
   // =============================================
@@ -180,7 +192,7 @@ export const VotingProvider = ({ children }) => {
     });
     const added = await client.add(data);
 
-    const ipfs = `https://ipfs.infura.io/ipfs/${added.path}`;
+    const ipfs = `https://dvm.infura-ipfs.io/ipfs/${added.path}`;
 
     const candidate = await contract.setCandidate(
       address,

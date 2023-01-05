@@ -1,8 +1,8 @@
 .vote_Status{
-    background-color: #9a02ac;
+    background-color: white;
     padding: .5rem 1rem;
     font-size: 1.3rem;
-    color: #fff;
+    color: black;
     font-weight: 700;
     border-radius: .2rem;
 }
